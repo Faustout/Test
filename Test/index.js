@@ -416,21 +416,299 @@ The 5 largest countries in the world:
 
 // console.log(rockPaperScissors());
 
-let fruit = ["🍎", "🍊", "🍎", "🍎", "🍊"]
-let appleShelf = document.getElementById("apple-shelf")
-let orangeShelf = document.getElementById("orange-shelf")
+// let fruit = ["🍎", "🍊", "🍎", "🍎", "🍊"]
+// let appleShelf = document.getElementById("apple-shelf")
+// let orangeShelf = document.getElementById("orange-shelf")
 
 // Create a function that puts the apples onto the appleShelf
 // and the oranges onto the orangeShelf. Use a for loop,
 // a conditional statement, and the textContent property.
 
-function redShelf(){
-    for (let i=0; i<fruit.length;i++){
-        if (fruit[i] === "🍎" ){
-            appleShelf.textContent += "🍎"
-        }
-        else orangeShelf.textContent += "🍊"
-    } 
-}
-console.log(redShelf());
+// function redShelf(){
+//     for (let i=0; i<fruit.length;i++){
+//         if (fruit[i] === "🍎" ){
+//             appleShelf.textContent += "🍎"
+//         }
+//         else orangeShelf.textContent += "🍊"
+//     } 
+// }
+// console.log(redShelf());
 
+
+// 1. Grab the box from the DOM and store it in a variable
+// 2. Add a click event listener to the box 
+// 3. Log out "I want to open the box!" when it's clicked
+
+// let boxOpen = document.getElementById("box")
+// boxOpen.addEventListener("click", function (){
+//     console.log("I want to open the box!");
+// }   
+// )
+
+// If possible, use const. If not, use let.
+
+// Which variables below should be changed from let to const?
+
+// The customer wants to order some stuff. Here are the details:
+// const basePrice = 520
+// const discount = 120
+// let shippingCost = 12
+// let shippingTime = "5-12 days"
+
+// // Whops! Turns out the shipping will be a bit more complex
+// shippingCost = 15
+// shippingTime = "7-14 days"
+
+// // Calculating the full price
+// const  fullPrice = basePrice - discount + shippingCost
+
+// // Finally, notifying the customer
+// console.log("Total cost: " + fullPrice + ". It will arrive in " + shippingTime)
+
+// Use .innerHTML to render a Buy! button inside the div container
+
+// const container = document.getElementById("container")
+
+// container.innerHTML = "<button onclick='buy()'>Buy!</button>"
+
+// function buy() {
+//    // When clicked, render a paragraph under the button (in the container)
+// // that says "Thank you for buying!
+// container.innerHTML += "<p>Thank you for buying!</p>"
+    
+// }
+
+
+// template strings/literals
+
+// const recipient = "James"
+// const sender = "Per Harald Borgen"
+
+// // Break the email string into multiple lines
+// const email = 
+// `
+// Hey ${recipient}!
+// How is it going?
+// Cheers ${sender}
+// `
+
+// console.log(email)
+
+
+// 1. Save a key-value pair in localStorage
+// 2. Refresh the page. Get the value and log it to the console
+// 3. Clear localStorage
+
+// HINTS:
+// localStorage.setItem(key, value)
+// localStorage.getItem(key)
+// localStorage.clear()
+// PS: both key and value need to be strings
+// localStorage.setItem("myLeads","")
+// localStorage.getItem("myLeads")
+// localStorage.clear()
+
+// let myLeads =[`["www.awesomelead.com"]`]
+
+// //1. turn the myLeads string into an array (object)
+// myLeads = JSON.parse(myLeads)
+// //2. Push a new value into the array
+// myLeads.push("www.epiclead.com")
+// //3. Turn the array into string again
+// myLeads = JSON.stringify(myLeads)
+// //4. Console.log the string using typeof to make sure the type is string
+// console.log(myLeads)
+
+// console.log(  Boolean("")   ) //false
+// console.log(  Boolean("0")  ) //true
+// console.log(  Boolean(100)  ) //true
+// console.log(  Boolean(null) ) //false
+// console.log(  Boolean([0])  ) //true
+// console.log(  Boolean(-0)   ) //false
+
+// const welcomeEl = document.getElementById("welcome-el")
+
+// // Give the function a parameter, greeting, that replaces "Welcome back"
+// function greetUser(greeting, name, emoji) { 
+
+//    welcomeEl.textContent = `
+//                              ${greeting}, ${name} ${emoji}
+
+//                              `
+// }
+
+// greetUser("Yo", "Faust","🦥")
+
+
+// Create a function, add(), that adds two numbers together and returns the sum
+
+// function add(firstnum, secondnum){
+//    return firstnum + secondnum
+// }
+
+// console.log( add(3,4)    ) // should log 7
+// console.log( add(9, 102) ) // should log 111
+
+
+// What are greeting and name? parameters
+// What are "Howdy" and "James"? arguments
+// What are num1 and num2? parameters
+// What are 3 and 4? arguments
+
+
+//.                parameters
+// function greetUser(greeting, name) { 
+//     welcomeEl.textContent = `${greeting}, ${name} 👋`
+// }
+
+// //.        arguments
+// let hi = "Howdy"
+// greetUser(hi, "James")
+
+
+// function add(num1, num2) {
+//     return num1 + num2
+// }
+
+// add(3, 4)
+
+// Create a function, getFirst(arr), that returns the first item in the array
+// function getFirst(arr){
+//     return arr[0]
+// }
+
+// console.log(getFirst([1,2,3]));
+// Call it with an array as an argument to verify that it works
+
+
+// SETTING THE STAGE
+// let player = "Per"
+// let opponent = "Nick"
+// const game = "AmazingFighter"
+// let points = 0
+// let hasWon = false
+
+// // PLAYING THE GAME
+// points += 100
+// hasWon = true
+
+// // ANNOUNCING THE WINNER
+// if (hasWon) {
+//  console.log(
+//     `${player} got ${points} points and won the ${game} game!`)
+// } else {
+//     console.log(`The winner is ${opponent}! ${player} lost the game`);
+// }
+
+// Go through all variables and decide if they should be let or const
+// Change the console logs to use template strings instead of double quotes
+
+// let myCourses = ["Learn CSS Animations", "UI Design Fundamentals", "Intro to Clean Code"]
+
+// Create a function that takes a single parameter, an array,
+// and logs all the items of the array to the console.
+// Call the function while passing in myCourses as an argument
+
+// function courseMy (arr){
+//     for(i = 0; i < arr.length; i++)
+//         console.log("- " + arr[i]);      
+// }
+
+// courseMy(myCourses)
+
+// Save a value to localStorage
+// Delete your code and refresh the page
+// Fetch your value from localStorage and log it out
+
+// let weekends = ["Friday", "Saturday", "Sunday"]
+
+// localStorage.setItem("weekends", weekends)
+// localStorage.clear()
+
+// console.log(localStorage.getItem(weekends));
+
+// let data = [
+//     {
+//         player: "Jane",
+//         score: 52
+//     }, 
+//     {
+//         player: "Mark",
+//         score: 41
+//     }
+// ]
+
+// Fetch the button from the DOM, store it in a variable
+// Use addEventListener() to listen for button clicks
+// Log Jane's score when the button is clicked (via data)
+
+// let janeButton = document.getElementById("JaneButton")
+// janeButton.addEventListener("click", function(){
+//     console.log(data[0].score);
+    
+// })
+
+
+
+// The generateSentence(desc, arr) takes two parameterer: a description and an array.
+// It should return a string based upon the description and array.
+
+// Example 1: if you pass in "largest countries",and ["China", "India", "USA"],
+// it should return the string: "The 3 largest countries are China, India, USA"
+
+// Example 2:If you pass in "best fruits" and ["Apples", "Bananas"], it should return:
+// "The 2 best fruits are Apples, Bananas"
+
+// Use both a for loop and a template string to solve the challenge
+
+// let largestCountries = ["China", "India", "USA"]
+// let bestFruits = ["Apples", "Bananas"]
+
+//////salah si cuma nyoba2 aja
+// function generateSentence2(desc, arr) {
+//     for (i=0; i<arr.length; i++)
+//         if(desc === "largest countries" || arr === largestCountries){
+//             return `The 3 largest countries are ${largestCountries.join(", ")} `
+//         }
+//         else if(desc === "best fruits" || arr === bestFruits){
+//             return `The 2 best fruits are ${bestFruits.join(", ")} `
+//         }
+// }
+
+// console.log(generateSentence2("largest countries", largestCountries))
+// console.log(generateSentence2("best fruits", bestFruits))
+
+
+/////////yang bener
+function generateSentence(desc, arr){
+    let baseString = `The ${arr.length} ${desc} are `
+    const lastIndex = arr.length -1
+    for (i=0; i<arr.length; i++){
+        if (i=== lastIndex){
+            baseString += arr[i]
+        }else
+        baseString += arr[i] + ", "
+    }
+    return baseString
+}
+
+console.log(generateSentence("weekend days", ["Friday", "Saturday", "Sunday"]));
+
+// Create a function that renders the three team images
+// Use a for loop, template strings (``), plus equals (+=)
+// .innerHTML to solve the challenge.
+
+
+const imgs = [
+    "images/hip1.jpg",
+    "images/hip2.jpg",
+    "images/hip3.jpg"
+]
+const container = document.getElementById("container")
+function renderImg(){
+    let imagesRow =""
+    for (let i = 0; i < imgs.length; i++) {
+        imagesRow += `<img alt="employee in the company" class="team-img" src="${imgs[i]}">`
+    }   container.innerHTML = imagesRow
+ }
+renderImg()
